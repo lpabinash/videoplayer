@@ -1,0 +1,136 @@
+body{
+    margin:0;
+    /* justify-content: center; */
+    background-color: cornflowerblue;
+}
+#videoplayerwrapper{
+    display:flex;
+    margin-top:150px;
+    margin-bottom: 150px;
+    justify-content: center;
+    border-radius: 10px;
+    border: grey 2px solid;
+    width:1050px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: whitesmoke;
+    /* opacity: 1; */
+
+}
+#videoplayer{
+    width:700px;
+    height:1000px;
+    /* background-color: blue; */
+    overflow:hidden;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+#videoplaylist{
+    width:350px;
+    height: 1000px;
+    /* background-color: cyan; */
+    overflow: scroll;
+}
+#video-player{
+    width:700px;
+    height:430px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    margin:none;
+    padding:none;
+   margin-top:-29px;
+   /* overflow: hidden; */
+}
+#frame{
+    height:450px;
+    /* background-color: white; */
+    width:700px;
+    margin:0px;
+    border-bottom: 2px black solid;
+    /* overflow: hidden; */
+}
+#videoarea{
+    height:450px;
+    width:700px;
+    overflow:hidden;
+    /* background-color: red; */
+}
+#likes{
+    display:flex;
+    /* background-color: darkgrey; */
+    justify-content: space-between;
+    margin-top: -20px;
+    /* margin-bottom: 40px; */
+    /* padding-top: 20px; */
+    font-size: 10px;
+}
+#likes h2{
+    font-size:18px;
+}
+#save{
+    margin-top: 15px;
+    padding-right: 20px;
+    /* margin-right:20px; */
+}
+#save i{
+    margin-left:20px;
+}
+
+#video-tag{
+    width:300px;
+    height:250px;
+    background-color: lightgrey;
+    margin-left: 25px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    /* border: red 2px solid; */
+    /* padding:5px; */
+}
+#video-tag img{
+    width:300px;
+    height:200px;
+    border-radius: 8px;
+
+}
+#video-tag h2{
+    margin-top:5px;
+    padding-left: 10px;
+    font-size: 16px;
+    /* border: red 2px solid; */
+}
+.liked{
+    color:yellow;
+}
+.unliked{
+    color:black;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    overflow-x: hidden;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 10px;
+  }
+  .coloured{
+      color: teal;
+  }
+  #appTitle{
+      text-align: center;
+      margin-top: 50px;
+      font-size: 50px;
+      color:cyan;
+      margin-bottom: -100px;
+  }
