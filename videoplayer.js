@@ -120,7 +120,7 @@ var mainDiv = document.getElementById('videoplaylist');
 var id = localStorage.getItem("id");
 
 var xhttp1=new XMLHttpRequest();
-xhttp1.open('GET','http://5d76bf96515d1a0014085cf9.mockapi.io/playlist',true);
+xhttp1.open('GET','https://5d76bf96515d1a0014085cf9.mockapi.io/playlist',true);
 xhttp1.onreadystatechange = function() {
     if(this.readyState === 4) {
         
@@ -146,7 +146,7 @@ xhttp1.send();
 
 
 var xhttp2=new XMLHttpRequest();
-xhttp2.open('GET','http://5d76bf96515d1a0014085cf9.mockapi.io/video',true);
+xhttp2.open('GET','https://5d76bf96515d1a0014085cf9.mockapi.io/video',true);
 xhttp2.onreadystatechange = function() {
     if(this.readyState === 4) {
         var myplayer=JSON.parse(this.responseText);
