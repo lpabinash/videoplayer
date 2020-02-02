@@ -1,4 +1,5 @@
-console.log("page loaded")
+console.log("page loaded");
+
 // var id = localStorage.getItem("id");
 var playerscreen=document.getElementById('video-player');
 var views=document.getElementById("views");
@@ -8,7 +9,8 @@ var heart=document.getElementById("heart");
 var bookmark=document.getElementById("bookmark");
 var videoTag=document.getElementById("video-tag");
 var id = localStorage.getItem("id");
-const localData = JSON.parse(localStorage.getItem("videoData"));
+// var localData = JSON.parse(localStorage.getItem("videoData"));
+
 // var Data = JSON.parse(localStorage.getItem("videoData"));
 
 
@@ -41,11 +43,14 @@ maincard.onclick=function(){
     maincard.classList.add("coloured");
     // console.log(maincard.length);
     // maincard.classList.remove("coloured");
+
+    var localData = JSON.parse(localStorage.getItem("videoData"));
     
 
    
         
         var id = localStorage.getItem("id");
+       
             playerscreen.src="https://player.vimeo.com/video/"+localData[id-1].vimeoId;
             views.innerHTML=localData[id-1].views/1000 + 'k' + ' '+ "views";
             title.innerHTML=localData[id-1].title;
@@ -97,15 +102,17 @@ maincard.onclick=function(){
                     localStorage.setItem("videoData", JSON.stringify(localData));
                     
                 }
-                console.log(localData[id-1]);
+                // console.log(localData[id-1]);
             }
+
+            
             // console.log(localData[1]);
 
     }
     return maincard;
 
 }
-
+// localData = JSON.parse(localStorage.getItem("videoData"));
 
 
 
