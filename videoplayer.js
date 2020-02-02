@@ -1,4 +1,5 @@
 console.log("page loaded");
+var localData = JSON.parse(localStorage.getItem("videoData"));
 
 // var id = localStorage.getItem("id");
 var playerscreen=document.getElementById('video-player');
@@ -44,12 +45,12 @@ maincard.onclick=function(){
     // console.log(maincard.length);
     // maincard.classList.remove("coloured");
 
-    var localData = JSON.parse(localStorage.getItem("videoData"));
+    localData = JSON.parse(localStorage.getItem("videoData"));
     
 
    
         
-        var id = localStorage.getItem("id");
+        id = localStorage.getItem("id");
        
             playerscreen.src="https://player.vimeo.com/video/"+localData[id-1].vimeoId;
             views.innerHTML=localData[id-1].views/1000 + 'k' + ' '+ "views";
@@ -72,38 +73,7 @@ maincard.onclick=function(){
                 // heart.classList.add("unliked");
                 
             }
-            heart.onclick=function()
-            {
-                if(localData[id-1].isLiked===true || localData[id-1].isLiked==="true"){
-                    localData[id-1].isLiked="false";
-                    heart.style.color="black";
-                    // heart.classList.remove("unliked");
-                    localStorage.setItem("videoData", JSON.stringify(localData));
-                }else {
-                    localData[id-1].isLiked="true";
-                    heart.style.color="yellow";
-                    // heart.classList.add("unliked");
-                    localStorage.setItem("videoData", JSON.stringify(localData));
-                    
-                }
-                console.log(localData[1]);
-                
-            }
-            bookmark.onclick=function(){
-                if(localData[id-1].isSaved===true || localData[id-1].isSaved==="true"){
-                    localData[id-1].isSaved="false";
-                    bookmark.style.color="black";
-                    // heart.classList.remove("unliked");
-                    localStorage.setItem("videoData", JSON.stringify(localData));
-                }else {
-                    localData[id-1].isSaved="true";
-                    bookmark.style.color="yellow";
-                    // heart.classList.add("unliked");
-                    localStorage.setItem("videoData", JSON.stringify(localData));
-                    
-                }
-                // console.log(localData[id-1]);
-            }
+           
 
             
             // console.log(localData[1]);
@@ -114,7 +84,38 @@ maincard.onclick=function(){
 }
 // localData = JSON.parse(localStorage.getItem("videoData"));
 
-
+heart.onclick=function()
+{
+    if(localData[id-1].isLiked===true || localData[id-1].isLiked==="true"){
+        localData[id-1].isLiked="false";
+        heart.style.color="black";
+        // heart.classList.remove("unliked");
+        localStorage.setItem("videoData", JSON.stringify(localData));
+    }else {
+        localData[id-1].isLiked="true";
+        heart.style.color="yellow";
+        // heart.classList.add("unliked");
+        localStorage.setItem("videoData", JSON.stringify(localData));
+        
+    }
+    // console.log(localData[1]);
+    
+}
+bookmark.onclick=function(){
+    if(localData[id-1].isSaved===true || localData[id-1].isSaved==="true"){
+        localData[id-1].isSaved="false";
+        bookmark.style.color="black";
+        // heart.classList.remove("unliked");
+        localStorage.setItem("videoData", JSON.stringify(localData));
+    }else {
+        localData[id-1].isSaved="true";
+        bookmark.style.color="yellow";
+        // heart.classList.add("unliked");
+        localStorage.setItem("videoData", JSON.stringify(localData));
+        
+    }
+    // console.log(localData[id-1]);
+}
 
 
 
